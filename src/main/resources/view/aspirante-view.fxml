@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.ingsoft.bvasquez.quel.controller.AspiranteController">
+   <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+   <top>
+      <Label text="Inventario de aspirantes" styleClass="title" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin><Insets bottom="10"/></BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tblAspirantes">
+         <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="110"/>
+            <TableColumn fx:id="colApellido" text="Apellido" prefWidth="110"/>
+            <TableColumn fx:id="colCorreo" text="Correo" prefWidth="160"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="150"/>
+            <TableColumn fx:id="colEdad" text="Edad" prefWidth="55"/>
+         </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox spacing="8" prefWidth="230">
+         <padding><Insets left="15"/></padding>
+         <Label text="Nombre"/>
+         <TextField fx:id="txtNombre"/>
+         <Label text="Apellido"/>
+         <TextField fx:id="txtApellido"/>
+         <Label text="Correo"/>
+         <TextField fx:id="txtCorreo"/>
+         <Label text="Teléfono"/>
+         <TextField fx:id="txtTelefono"/>
+         <Label text="Dirección"/>
+         <TextField fx:id="txtDireccion"/>
+         <Label text="Edad"/>
+         <TextField fx:id="txtEdad"/>
+         <Button text="Agregar" onAction="#onAgregar" maxWidth="Infinity" styleClass="primary"/>
+         <Button text="Actualizar" onAction="#onActualizar" maxWidth="Infinity"/>
+         <Button text="Eliminar" onAction="#onEliminar" maxWidth="Infinity"/>
+         <Button text="Limpiar" onAction="#onLimpiar" maxWidth="Infinity"/>
+      </VBox>
+   </right>
+</BorderPane>

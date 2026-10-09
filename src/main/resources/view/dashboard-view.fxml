@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.ingsoft.bvasquez.quel.controller.DashboardController" alignment="CENTER" spacing="8">
+   <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+   <Label text="Aspirantes registrados" styleClass="title"/>
+   <Label fx:id="lblTotalAspirantes" text="0" styleClass="big-number"/>
+</VBox>

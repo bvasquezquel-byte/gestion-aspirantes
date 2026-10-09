@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.ingsoft.bvasquez.quel.controller.RegisterController" alignment="CENTER" spacing="12" prefWidth="380" styleClass="card">
+   <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+   <Label text="Crear cuenta" styleClass="title"/>
+   <TextField fx:id="txtUsuario" promptText="Usuario"/>
+   <PasswordField fx:id="txtPassword" promptText="Contraseña (mín. 6 caracteres)"/>
+   <PasswordField fx:id="txtConfirmacion" promptText="Confirmar contraseña"/>
+   <ComboBox fx:id="cmbRol" promptText="Seleccione un rol" maxWidth="Infinity"/>
+   <Button text="Registrarse" onAction="#onRegistrar" maxWidth="Infinity" styleClass="primary"/>
+   <Hyperlink text="Volver al inicio de sesión" onAction="#onVolver"/>
+</VBox>
