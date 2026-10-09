@@ -30,8 +30,7 @@ public class JdbcUsuarioRepository implements UsuarioRepository {
                 if (!rs.next()) {
                     return Optional.empty();
                 }
-                
-                // Mapeo del String de la BD al enum Rol
+               
                 String nombreRol = rs.getString("nombre");
                 Rol rol = Rol.ADMIN;
                 if ("Usuario".equalsIgnoreCase(nombreRol) || "USER".equalsIgnoreCase(nombreRol)) {
@@ -70,7 +69,7 @@ public class JdbcUsuarioRepository implements UsuarioRepository {
         try (Connection con = db.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
             
-            // Asigna id_rol según el enum (1 para ADMIN, 2 para USER)
+          
             int idRol = (usuario.getRol() == Rol.ADMIN) ? 1 : 2;
 
             ps.setString(1, usuario.getUsername());

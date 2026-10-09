@@ -96,7 +96,6 @@ public class AspiranteController {
         limpiarFormulario();
     }
 
-    /** Ejecuta una acción, refresca la tabla y traduce las excepciones del dominio a Alerts. */
     private void ejecutar(Runnable accion) {
         try {
             accion.run();
